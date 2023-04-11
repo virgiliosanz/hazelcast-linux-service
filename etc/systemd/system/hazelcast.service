@@ -7,7 +7,7 @@ Before=httpd.service
 EnvironmentFile=-/etc/hazelcast/hazelcast.conf
 User=hazelcast
 PIDFile=/var/run/hazelcast/hazelcast.pid
-ExecStart=/opt/hazelcast/bin/start.sh
+ExecStart=/opt/hazelcast/bin/hz-start
 StandardOutput=journal
 
 [Install]
