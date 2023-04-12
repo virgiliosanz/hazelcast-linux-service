@@ -4,9 +4,16 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://www.hazelcast.com/schema/config
            http://www.hazelcast.com/schema/config/hazelcast-config-4.2.xsd">
-
+           
     <network>
+      <join>
         <rest-api enabled="true"/>
-    </network>
+        <multicast enabled="false"/>
+        <gcp enabled="true">
+          <label>application=hazelcast</label>
+          <hz-port>5701-5708</hz-port>
+        </gcp>
+      </join>
+  </network>
 
 </hazelcast>
